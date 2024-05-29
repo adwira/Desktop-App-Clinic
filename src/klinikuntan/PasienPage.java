@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package klinikuntan;
-
+import java.sql.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author USER
@@ -154,7 +155,26 @@ public class PasienPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
-        // TODO add your handling code here:
+         try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
+            String sql = "INSERT INTO pasien VALUES(?, ?, ?, ?, ?, ?);";
+            PreparedStatement pst = conn.prepareStatement(sql);
+
+            pst.setString(1, nikPasien.getText());
+            pst.setString(2, namaPasien.getText());
+            pst.setString(3, usiaPasien.getText());
+            pst.setString(4, genderPasien.getText());
+            pst.setString(5, alamatPasien.getText());
+            pst.setString(6, hpPasien.getText());
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
+            conn.close();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Data Sudah Ada");
+        }
     }//GEN-LAST:event_confirmButtonActionPerformed
 
     private void nikPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nikPasienActionPerformed
