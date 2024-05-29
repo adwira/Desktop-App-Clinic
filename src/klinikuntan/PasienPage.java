@@ -33,15 +33,13 @@ public class PasienPage extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        deleteButton = new javax.swing.JButton();
+        confirmButton = new javax.swing.JButton();
         nikPasien = new javax.swing.JTextField();
         namaPasien = new javax.swing.JTextField();
         usiaPasien = new javax.swing.JTextField();
         genderPasien = new javax.swing.JTextField();
         alamatPasien = new javax.swing.JTextField();
         hpPasien = new javax.swing.JTextField();
-        updateButton = new javax.swing.JButton();
-        addButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
@@ -68,14 +66,11 @@ public class PasienPage extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setText("Nomor HP Pasien");
 
-        deleteButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        deleteButton.setText("Delete");
-        deleteButton.setMaximumSize(new java.awt.Dimension(72, 23));
-        deleteButton.setMinimumSize(new java.awt.Dimension(72, 23));
-        deleteButton.setPreferredSize(new java.awt.Dimension(72, 23));
-        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+        confirmButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        confirmButton.setText("Konfirmasi");
+        confirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButtonActionPerformed(evt);
+                confirmButtonActionPerformed(evt);
             }
         });
 
@@ -88,28 +83,6 @@ public class PasienPage extends javax.swing.JFrame {
         usiaPasien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usiaPasienActionPerformed(evt);
-            }
-        });
-
-        updateButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        updateButton.setText("Update");
-        updateButton.setMaximumSize(new java.awt.Dimension(72, 23));
-        updateButton.setMinimumSize(new java.awt.Dimension(72, 23));
-        updateButton.setPreferredSize(new java.awt.Dimension(72, 23));
-        updateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateButtonActionPerformed(evt);
-            }
-        });
-
-        addButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        addButton.setText("Add");
-        addButton.setMaximumSize(new java.awt.Dimension(72, 23));
-        addButton.setMinimumSize(new java.awt.Dimension(72, 23));
-        addButton.setPreferredSize(new java.awt.Dimension(72, 23));
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
             }
         });
 
@@ -139,11 +112,7 @@ public class PasienPage extends javax.swing.JFrame {
                             .addComponent(hpPasien, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(27, 27, 27))
         );
         layout.setVerticalGroup(
@@ -177,19 +146,16 @@ public class PasienPage extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(hpPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+    private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_deleteButtonActionPerformed
+    }//GEN-LAST:event_confirmButtonActionPerformed
 
     private void nikPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nikPasienActionPerformed
         // TODO add your handling code here:
@@ -198,14 +164,6 @@ public class PasienPage extends javax.swing.JFrame {
     private void usiaPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usiaPasienActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usiaPasienActionPerformed
-
-    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_updateButtonActionPerformed
-
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,9 +201,8 @@ public class PasienPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addButton;
     private javax.swing.JTextField alamatPasien;
-    private javax.swing.JButton deleteButton;
+    private javax.swing.JButton confirmButton;
     private javax.swing.JTextField genderPasien;
     private javax.swing.JTextField hpPasien;
     private javax.swing.JLabel jLabel1;
@@ -257,7 +214,6 @@ public class PasienPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField namaPasien;
     private javax.swing.JTextField nikPasien;
-    private javax.swing.JButton updateButton;
     private javax.swing.JTextField usiaPasien;
     // End of variables declaration//GEN-END:variables
 }
