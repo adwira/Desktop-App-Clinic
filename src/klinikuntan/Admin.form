@@ -2666,11 +2666,6 @@
                                       <Component id="textKeluhanPemeriksaan" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="labelTanggalPemeriksaan" min="-2" pref="125" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="textTanggalPemeriksaan" pref="303" max="32767" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelKodeBagianPemeriksaan" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
@@ -2719,12 +2714,7 @@
                               <Component id="labelKeluhan" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="textKeluhanPemeriksaan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelTanggalPemeriksaan" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textTanggalPemeriksaan" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="153" max="32767" attributes="0"/>
+                          <EmptySpace pref="196" max="32767" attributes="0"/>
                           <Component id="buttonTambahPemeriksaan" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
@@ -2796,14 +2786,6 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTambahPemeriksaanActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelTanggalPemeriksaan">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Tanggal Pemeriksaan"/>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[90, 25]"/>
-                    </Property>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JTextField" name="textKodeBagianPemeriksaan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -2826,13 +2808,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="textKeluhanPemeriksaan">
-                  <Properties>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[300, 25]"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="textTanggalPemeriksaan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
@@ -2871,11 +2846,6 @@
                                       <Component id="textDiagnosaPemeriksaan1" alignment="0" pref="303" max="32767" attributes="0"/>
                                       <Component id="textKeluhanPemeriksaan1" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="labelTanggalPemeriksaan1" min="-2" pref="125" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                                  <Component id="textTanggalPemeriksaan1" pref="303" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelKodeBagianPemeriksaan1" min="-2" max="-2" attributes="0"/>
@@ -2925,12 +2895,7 @@
                               <Component id="labelKeluhan1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="textKeluhanPemeriksaan1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="labelTanggalPemeriksaan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textTanggalPemeriksaan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="153" max="32767" attributes="0"/>
+                          <EmptySpace pref="196" max="32767" attributes="0"/>
                           <Component id="buttonPerbaruiPemeriksaan" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
@@ -3002,14 +2967,6 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPerbaruiPemeriksaanActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="labelTanggalPemeriksaan1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Tanggal Pemeriksaan"/>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[90, 25]"/>
-                    </Property>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JTextField" name="textKodeBagianPemeriksaan1">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -3032,13 +2989,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="textKeluhanPemeriksaan1">
-                  <Properties>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[300, 25]"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="textTanggalPemeriksaan1">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>

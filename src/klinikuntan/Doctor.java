@@ -36,6 +36,8 @@ public class Doctor extends javax.swing.JFrame {
         buttonDiagnosaPemeriksaan = new javax.swing.JButton();
         scrollPaneDiagnosaPemeriksaan = new javax.swing.JScrollPane();
         textAreaDiagnosaPemeriksaan = new javax.swing.JTextArea();
+        textHargaPemeriksaanDoctor = new javax.swing.JTextField();
+        labelKodePemeriksaan4 = new javax.swing.JLabel();
         resepDoctorTabbedPane = new javax.swing.JTabbedPane();
         panelTambahObatResepDoctor = new javax.swing.JPanel();
         textDosisObat = new javax.swing.JTextField();
@@ -83,6 +85,11 @@ public class Doctor extends javax.swing.JFrame {
         textAreaDiagnosaPemeriksaan.setRows(5);
         scrollPaneDiagnosaPemeriksaan.setViewportView(textAreaDiagnosaPemeriksaan);
 
+        textHargaPemeriksaanDoctor.setPreferredSize(new java.awt.Dimension(300, 25));
+
+        labelKodePemeriksaan4.setText("Harga");
+        labelKodePemeriksaan4.setPreferredSize(new java.awt.Dimension(90, 25));
+
         javax.swing.GroupLayout panelDiagnosaPemeriksaanDoctorLayout = new javax.swing.GroupLayout(panelDiagnosaPemeriksaanDoctor);
         panelDiagnosaPemeriksaanDoctor.setLayout(panelDiagnosaPemeriksaanDoctorLayout);
         panelDiagnosaPemeriksaanDoctorLayout.setHorizontalGroup(
@@ -91,16 +98,18 @@ public class Doctor extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelKodePemeriksaan3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelDiagnosa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelDiagnosa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelKodePemeriksaan4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textKdPemeriksaanDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollPaneDiagnosaPemeriksaan))
-                .addGap(167, 167, 167))
+                    .addComponent(textKdPemeriksaanDokter, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                    .addComponent(scrollPaneDiagnosaPemeriksaan)
+                    .addComponent(textHargaPemeriksaanDoctor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(155, 155, 155))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDiagnosaPemeriksaanDoctorLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addGap(65, 65, 65))
         );
         panelDiagnosaPemeriksaanDoctorLayout.setVerticalGroup(
             panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,10 +119,17 @@ public class Doctor extends javax.swing.JFrame {
                     .addComponent(labelKodePemeriksaan3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textKdPemeriksaanDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textHargaPemeriksaanDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelKodePemeriksaan4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollPaneDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelDiagnosa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                    .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(labelDiagnosa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(scrollPaneDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(buttonDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
@@ -197,7 +213,7 @@ public class Doctor extends javax.swing.JFrame {
                 .addGroup(panelTambahObatResepDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelObat4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(scrollPaneDeskripsiResep, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                 .addComponent(buttonTambahResepDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
         );
@@ -251,7 +267,7 @@ public class Doctor extends javax.swing.JFrame {
             .addGroup(panelResepObatDoctorLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(scrollPaneResep, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(buttonCetakResepDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
@@ -276,7 +292,7 @@ public class Doctor extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(doctorTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE))
+                .addComponent(doctorTabbedPane))
         );
 
         pack();
@@ -337,6 +353,7 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel labelDiagnosa2;
     private javax.swing.JLabel labelKodePemeriksaan3;
+    private javax.swing.JLabel labelKodePemeriksaan4;
     private javax.swing.JLabel labelNamaObat3;
     private javax.swing.JLabel labelObat3;
     private javax.swing.JLabel labelObat4;
@@ -352,6 +369,7 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JTable tableResepObat;
     private javax.swing.JTextArea textAreaDiagnosaPemeriksaan;
     private javax.swing.JTextField textDosisObat;
+    private javax.swing.JTextField textHargaPemeriksaanDoctor;
     private javax.swing.JTextField textJumlahObatResep;
     private javax.swing.JTextField textKdPemeriksaanDokter;
     private javax.swing.JTextField textNamaObatResep;
