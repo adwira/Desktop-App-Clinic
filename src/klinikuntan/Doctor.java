@@ -4,6 +4,13 @@
  */
 package klinikuntan;
 
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author USER
@@ -16,6 +23,9 @@ public class Doctor extends javax.swing.JFrame {
     public Doctor() {
         initComponents();
     }
+    
+    int curkd_resep = 3;
+    List<Object[]> rows = new ArrayList<>();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,7 +58,7 @@ public class Doctor extends javax.swing.JFrame {
         textJumlahObatResep = new javax.swing.JTextField();
         labelObat4 = new javax.swing.JLabel();
         scrollPaneDeskripsiResep = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        textAreaDeskripsi = new javax.swing.JTextArea();
         buttonTambahResepDoctor = new javax.swing.JButton();
         panelResepObatDoctor = new javax.swing.JPanel();
         scrollPaneResep = new javax.swing.JScrollPane();
@@ -70,6 +80,11 @@ public class Doctor extends javax.swing.JFrame {
         labelDiagnosa2.setPreferredSize(new java.awt.Dimension(90, 25));
 
         textKdPemeriksaanDokter.setPreferredSize(new java.awt.Dimension(300, 25));
+        textKdPemeriksaanDokter.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                textKdPemeriksaanDokterMouseClicked(evt);
+            }
+        });
 
         buttonDiagnosaPemeriksaan.setText("Tambah");
         buttonDiagnosaPemeriksaan.setMaximumSize(new java.awt.Dimension(80, 25));
@@ -119,16 +134,13 @@ public class Doctor extends javax.swing.JFrame {
                     .addComponent(labelKodePemeriksaan3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textKdPemeriksaanDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textHargaPemeriksaanDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelKodePemeriksaan4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(labelDiagnosa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(scrollPaneDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(labelKodePemeriksaan4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textHargaPemeriksaanDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelDiagnosa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollPaneDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(buttonDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
@@ -156,10 +168,10 @@ public class Doctor extends javax.swing.JFrame {
         labelObat4.setText("Deskripsi");
         labelObat4.setPreferredSize(new java.awt.Dimension(90, 25));
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setPreferredSize(new java.awt.Dimension(300, 84));
-        scrollPaneDeskripsiResep.setViewportView(jTextArea2);
+        textAreaDeskripsi.setColumns(20);
+        textAreaDeskripsi.setRows(5);
+        textAreaDeskripsi.setPreferredSize(new java.awt.Dimension(300, 84));
+        scrollPaneDeskripsiResep.setViewportView(textAreaDeskripsi);
 
         buttonTambahResepDoctor.setText("Tambah");
         buttonTambahResepDoctor.setMaximumSize(new java.awt.Dimension(80, 25));
@@ -247,6 +259,11 @@ public class Doctor extends javax.swing.JFrame {
         buttonCetakResepDoctor.setMaximumSize(new java.awt.Dimension(80, 25));
         buttonCetakResepDoctor.setMinimumSize(new java.awt.Dimension(80, 25));
         buttonCetakResepDoctor.setPreferredSize(new java.awt.Dimension(80, 25));
+        buttonCetakResepDoctor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCetakResepDoctorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelResepObatDoctorLayout = new javax.swing.GroupLayout(panelResepObatDoctor);
         panelResepObatDoctor.setLayout(panelResepObatDoctorLayout);
@@ -300,11 +317,134 @@ public class Doctor extends javax.swing.JFrame {
 
     private void buttonDiagnosaPemeriksaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDiagnosaPemeriksaanActionPerformed
         // TODO add your handling code here:
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+            String kd_periksa = textKdPemeriksaanDokter.getText();
+            PreparedStatement pst = conn.prepareStatement("Update pemeriksaan set diagnosa = ?, harga = ? where kd_periksa = " + kd_periksa);
+
+            String diagnosa = textAreaDiagnosaPemeriksaan.getText();
+            String stringHarga = textHargaPemeriksaanDoctor.getText();
+            Integer harga = Integer.parseInt(stringHarga);
+
+            pst.setString(1, diagnosa);
+            pst.setInt(2, harga);
+
+            pst.executeUpdate();
+            conn.close();
+            JOptionPane.showMessageDialog(null, "Data Berhasil Ditambahkan");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan");
+        }
+        
     }//GEN-LAST:event_buttonDiagnosaPemeriksaanActionPerformed
 
     private void buttonTambahResepDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTambahResepDoctorActionPerformed
         // TODO add your handling code here:
+        Object[] header = {"NO", "Nama", "Jumlah", "Dosis"};
+        Object[][] matchedData = null;
+        int rowCount = 1;
+        
+        String kd_periksa = "";
+        DefaultTableModel model = new DefaultTableModel();
+        
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804")) {
+
+            // Get the last kd_periksa
+            try (PreparedStatement pst = conn.prepareStatement("SELECT kd_periksa FROM pemeriksaan ORDER BY kd_periksa DESC LIMIT 1")) {
+                ResultSet rs = pst.executeQuery();
+                if (rs.next()) {
+                    kd_periksa = rs.getString("kd_periksa");
+                } else {
+                    // Handle case where no pemeriksaan records exist
+                    JOptionPane.showMessageDialog(null, "Tidak ada data pemeriksaan ditemukan.");
+                    return;
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "An error occurred (getting kd_periksa): " + e.getMessage());
+                return;
+            }
+
+            String kd_resep = String.format("%08d", curkd_resep);
+            String kd_obat = "";
+            int stok = 0;
+            String nama = textNamaObatResep.getText();
+            String stringJumlah = textJumlahObatResep.getText();
+            Integer jumlah = Integer.parseInt(stringJumlah);
+            String dosis = textDosisObat.getText();
+            String deskripsi = textAreaDeskripsi.getText();
+
+            // Check for existing obat and stock
+            try (PreparedStatement pst1 = conn.prepareStatement("SELECT kd_obat, stok FROM obat WHERE nama_obat = ?")) {
+                pst1.setString(1, nama);
+                ResultSet rs = pst1.executeQuery();
+                if (rs.next()) {
+                    kd_obat = rs.getString("kd_obat");
+                    stok = rs.getInt("stok");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Obat tidak ditemukan");
+                    return; // Exit if obat not found
+                }
+                if (stok == 0) {
+                    JOptionPane.showMessageDialog(null, "Stok Habis");
+                    return; // Exit if stock is zero
+                }
+
+                // Insert into resep table if obat is found and has stock
+                PreparedStatement pst = conn.prepareStatement("INSERT INTO resep(kd_resep, nama_obat, jumlah, dosis, deskripsi, kd_periksa, kd_obat) VALUES (?, ?, ?, ?, ?, ?, ?)");
+                pst.setString(1, kd_resep);
+                pst.setString(2, nama);
+                pst.setInt(3, jumlah);
+                pst.setString(4, dosis);
+                pst.setString(5, deskripsi);
+                pst.setString(6, kd_periksa);
+                pst.setString(7, kd_obat);
+                pst.executeUpdate();
+                JOptionPane.showMessageDialog(null, "Berhasil Ditambahkan Ke Resep");
+                String srowCount = String.valueOf(rowCount);
+                String sjumlah = String.valueOf(jumlah);
+
+                String[] rowData = {srowCount, nama, sjumlah, dosis};
+                rowCount++;
+                rows.add(rowData);
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "An error occurred (adding resep): " + e.getMessage());
+            }
+            matchedData = new Object[rows.size()][];
+            for (int i = 0; i < rows.size(); i++) {
+                matchedData[i] = rows.get(i);
+            }
+            
+            model.setDataVector(matchedData, header);
+            tableResepObat.setModel(model);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "An error occurred: outer: " + e.getMessage());
+        }
+        
     }//GEN-LAST:event_buttonTambahResepDoctorActionPerformed
+
+    private void textKdPemeriksaanDokterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textKdPemeriksaanDokterMouseClicked
+        // TODO add your handling code here:
+         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804"); PreparedStatement pst = conn.prepareStatement("select * from pemeriksaan order by kd_periksa desc limit 1;"); ResultSet rs = pst.executeQuery()) {
+            String kd_periksa = "";
+            while (rs.next()) {
+                kd_periksa = rs.getString("kd_periksa");
+                System.out.println(kd_periksa);
+            }
+            textKdPemeriksaanDokter.setText(kd_periksa);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "An error occurred: " + e.getMessage());
+        }
+        
+    }//GEN-LAST:event_textKdPemeriksaanDokterMouseClicked
+
+    private void buttonCetakResepDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCetakResepDoctorActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Berhasil Dicetak");
+        curkd_resep++;
+        rows.clear();
+    }//GEN-LAST:event_buttonCetakResepDoctorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -350,7 +490,6 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JButton buttonTambahResepDoctor;
     private javax.swing.JTabbedPane doctorTabbedPane;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel labelDiagnosa2;
     private javax.swing.JLabel labelKodePemeriksaan3;
     private javax.swing.JLabel labelKodePemeriksaan4;
@@ -367,6 +506,7 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollPaneDiagnosaPemeriksaan;
     private javax.swing.JScrollPane scrollPaneResep;
     private javax.swing.JTable tableResepObat;
+    private javax.swing.JTextArea textAreaDeskripsi;
     private javax.swing.JTextArea textAreaDiagnosaPemeriksaan;
     private javax.swing.JTextField textDosisObat;
     private javax.swing.JTextField textHargaPemeriksaanDoctor;
