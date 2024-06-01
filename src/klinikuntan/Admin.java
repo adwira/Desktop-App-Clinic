@@ -241,19 +241,19 @@ public class Admin extends javax.swing.JFrame {
         shiftTabbedPane = new javax.swing.JTabbedPane();
         panelTambahShift = new javax.swing.JPanel();
         labelKodeShiftTambah = new javax.swing.JLabel();
-        textKodeShiftTambah = new javax.swing.JTextField();
+        kdJadwal = new javax.swing.JTextField();
         labelHariTambah = new javax.swing.JLabel();
-        textHariTambah = new javax.swing.JTextField();
+        hari = new javax.swing.JTextField();
         labelWaktuTambah = new javax.swing.JLabel();
-        textWaktuTambah = new javax.swing.JTextField();
+        waktu = new javax.swing.JTextField();
         buttonTambahShift = new javax.swing.JButton();
         panelUpdateShift = new javax.swing.JPanel();
         labelKodeShiftUpdate = new javax.swing.JLabel();
-        textKodeShiftUpdate = new javax.swing.JTextField();
+        upKdjadwal = new javax.swing.JTextField();
         labelHariTambah1 = new javax.swing.JLabel();
-        textHariUpdate = new javax.swing.JTextField();
+        upHari = new javax.swing.JTextField();
         labelWaktuTambah1 = new javax.swing.JLabel();
-        textWaktuUpdate = new javax.swing.JTextField();
+        upWaktu = new javax.swing.JTextField();
         buttonUpdateShift = new javax.swing.JButton();
         panelCariShift = new javax.swing.JPanel();
         buttonSearchShift = new javax.swing.JButton();
@@ -1577,6 +1577,11 @@ public class Admin extends javax.swing.JFrame {
 
         buttonUpdateObat.setText("Perbarui");
         buttonUpdateObat.setPreferredSize(new java.awt.Dimension(72, 25));
+        buttonUpdateObat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonUpdateObatActionPerformed(evt);
+            }
+        });
 
         labelNamaObat1.setText("Nama Obat");
         labelNamaObat1.setPreferredSize(new java.awt.Dimension(90, 25));
@@ -2066,35 +2071,40 @@ public class Admin extends javax.swing.JFrame {
         labelKodeShiftTambah.setText("Kode Shift");
         labelKodeShiftTambah.setPreferredSize(new java.awt.Dimension(90, 25));
 
-        textKodeShiftTambah.setPreferredSize(new java.awt.Dimension(300, 25));
-        textKodeShiftTambah.addActionListener(new java.awt.event.ActionListener() {
+        kdJadwal.setPreferredSize(new java.awt.Dimension(300, 25));
+        kdJadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textKodeShiftTambahActionPerformed(evt);
+                kdJadwalActionPerformed(evt);
             }
         });
 
         labelHariTambah.setText("Hari");
         labelHariTambah.setPreferredSize(new java.awt.Dimension(90, 25));
 
-        textHariTambah.setPreferredSize(new java.awt.Dimension(300, 25));
-        textHariTambah.addActionListener(new java.awt.event.ActionListener() {
+        hari.setPreferredSize(new java.awt.Dimension(300, 25));
+        hari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textHariTambahActionPerformed(evt);
+                hariActionPerformed(evt);
             }
         });
 
         labelWaktuTambah.setText("Waktu");
         labelWaktuTambah.setPreferredSize(new java.awt.Dimension(90, 25));
 
-        textWaktuTambah.setPreferredSize(new java.awt.Dimension(300, 25));
-        textWaktuTambah.addActionListener(new java.awt.event.ActionListener() {
+        waktu.setPreferredSize(new java.awt.Dimension(300, 25));
+        waktu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textWaktuTambahActionPerformed(evt);
+                waktuActionPerformed(evt);
             }
         });
 
         buttonTambahShift.setText("Tambah");
         buttonTambahShift.setPreferredSize(new java.awt.Dimension(80, 25));
+        buttonTambahShift.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonTambahShiftActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTambahShiftLayout = new javax.swing.GroupLayout(panelTambahShift);
         panelTambahShift.setLayout(panelTambahShiftLayout);
@@ -2106,15 +2116,15 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(panelTambahShiftLayout.createSequentialGroup()
                         .addComponent(labelWaktuTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textWaktuTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(waktu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTambahShiftLayout.createSequentialGroup()
                         .addComponent(labelHariTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textHariTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(hari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTambahShiftLayout.createSequentialGroup()
                         .addComponent(labelKodeShiftTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textKodeShiftTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(kdJadwal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(170, 170, 170))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTambahShiftLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2127,15 +2137,15 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(panelTambahShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelKodeShiftTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textKodeShiftTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(kdJadwal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelTambahShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelHariTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textHariTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(hari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelTambahShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelWaktuTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textWaktuTambah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(waktu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
                 .addComponent(buttonTambahShift, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
@@ -2146,35 +2156,40 @@ public class Admin extends javax.swing.JFrame {
         labelKodeShiftUpdate.setText("Kode Shift");
         labelKodeShiftUpdate.setPreferredSize(new java.awt.Dimension(90, 25));
 
-        textKodeShiftUpdate.setPreferredSize(new java.awt.Dimension(300, 25));
-        textKodeShiftUpdate.addActionListener(new java.awt.event.ActionListener() {
+        upKdjadwal.setPreferredSize(new java.awt.Dimension(300, 25));
+        upKdjadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textKodeShiftUpdateActionPerformed(evt);
+                upKdjadwalActionPerformed(evt);
             }
         });
 
         labelHariTambah1.setText("Hari");
         labelHariTambah1.setPreferredSize(new java.awt.Dimension(90, 25));
 
-        textHariUpdate.setPreferredSize(new java.awt.Dimension(300, 25));
-        textHariUpdate.addActionListener(new java.awt.event.ActionListener() {
+        upHari.setPreferredSize(new java.awt.Dimension(300, 25));
+        upHari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textHariUpdateActionPerformed(evt);
+                upHariActionPerformed(evt);
             }
         });
 
         labelWaktuTambah1.setText("Waktu");
         labelWaktuTambah1.setPreferredSize(new java.awt.Dimension(90, 25));
 
-        textWaktuUpdate.setPreferredSize(new java.awt.Dimension(300, 25));
-        textWaktuUpdate.addActionListener(new java.awt.event.ActionListener() {
+        upWaktu.setPreferredSize(new java.awt.Dimension(300, 25));
+        upWaktu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textWaktuUpdateActionPerformed(evt);
+                upWaktuActionPerformed(evt);
             }
         });
 
         buttonUpdateShift.setText("Perbarui");
         buttonUpdateShift.setPreferredSize(new java.awt.Dimension(80, 25));
+        buttonUpdateShift.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonUpdateShiftActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelUpdateShiftLayout = new javax.swing.GroupLayout(panelUpdateShift);
         panelUpdateShift.setLayout(panelUpdateShiftLayout);
@@ -2186,15 +2201,15 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(panelUpdateShiftLayout.createSequentialGroup()
                         .addComponent(labelWaktuTambah1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textWaktuUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(upWaktu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelUpdateShiftLayout.createSequentialGroup()
                         .addComponent(labelHariTambah1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textHariUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(upHari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelUpdateShiftLayout.createSequentialGroup()
                         .addComponent(labelKodeShiftUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textKodeShiftUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(upKdjadwal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(170, 170, 170))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelUpdateShiftLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2207,15 +2222,15 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(panelUpdateShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelKodeShiftUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textKodeShiftUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upKdjadwal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelUpdateShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelHariTambah1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textHariUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upHari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelUpdateShiftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelWaktuTambah1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textWaktuUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upWaktu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
                 .addComponent(buttonUpdateShift, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
@@ -2736,29 +2751,29 @@ public class Admin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonDeleteObatActionPerformed
 
-    private void textKodeShiftTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textKodeShiftTambahActionPerformed
+    private void kdJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kdJadwalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textKodeShiftTambahActionPerformed
+    }//GEN-LAST:event_kdJadwalActionPerformed
 
-    private void textHariTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textHariTambahActionPerformed
+    private void hariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hariActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textHariTambahActionPerformed
+    }//GEN-LAST:event_hariActionPerformed
 
-    private void textWaktuTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textWaktuTambahActionPerformed
+    private void waktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waktuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textWaktuTambahActionPerformed
+    }//GEN-LAST:event_waktuActionPerformed
 
-    private void textKodeShiftUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textKodeShiftUpdateActionPerformed
+    private void upKdjadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upKdjadwalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textKodeShiftUpdateActionPerformed
+    }//GEN-LAST:event_upKdjadwalActionPerformed
 
-    private void textHariUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textHariUpdateActionPerformed
+    private void upHariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upHariActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textHariUpdateActionPerformed
+    }//GEN-LAST:event_upHariActionPerformed
 
-    private void textWaktuUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textWaktuUpdateActionPerformed
+    private void upWaktuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upWaktuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textWaktuUpdateActionPerformed
+    }//GEN-LAST:event_upWaktuActionPerformed
 
     private void buttonSearchShiftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSearchShiftActionPerformed
         // TODO add your handling code here:
@@ -3298,7 +3313,7 @@ public class Admin extends javax.swing.JFrame {
             pst.setString(1, kdObat.getText());
             pst.setString(2, namaObat.getText());
             pst.setInt(3, Integer.parseInt(stokObat.getText()));
-//            pst.setBigDecimal(4, new BigDecimal(hargaObat.getText())); // Menggunakan setBigDecimal untuk harga yang bertipe DECIMAL
+            pst.setBigDecimal(4, new BigDecimal(hargaObat.getText())); // Menggunakan setBigDecimal untuk harga yang bertipe DECIMAL
 
             pst.executeUpdate();
 
@@ -3313,6 +3328,77 @@ public class Admin extends javax.swing.JFrame {
             e.printStackTrace(); // Untuk mencetak detail stack trace ke konsol
         }
     }//GEN-LAST:event_buttonTambahObatActionPerformed
+
+    private void buttonUpdateObatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateObatActionPerformed
+        // TODO add your handling code here:
+        try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
+            String sql = "UPDATE obat SET nama_obat = ?, stok = ?, harga_obat = ? where kd_obat = ?;";
+            PreparedStatement pst = conn.prepareStatement(sql);
+
+            pst.setString(1, namaObat.getText());
+            pst.setInt(2, Integer.parseInt(stokObat.getText()));
+            pst.setBigDecimal(3, new BigDecimal(hargaObat.getText()));
+            pst.setString(4, kdObat.getText());
+
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Data berhasil diperbarui");
+            conn.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan: " + e.getMessage());
+            e.printStackTrace(); // Untuk mencetak detail stack trace ke konsol
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Stok harus berupa angka dan harga harus berupa nilai desimal yang valid.");
+            e.printStackTrace(); // Untuk mencetak detail stack trace ke konsol
+        }
+    }//GEN-LAST:event_buttonUpdateObatActionPerformed
+
+    private void buttonTambahShiftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTambahShiftActionPerformed
+        // TODO add your handling code here:
+         try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
+            String sql = "INSERT INTO shift (kd_shift, hari, waktu) VALUES( ?, ?, ?);";
+            PreparedStatement pst = conn.prepareStatement(sql);
+
+            pst.setString(1, kdJadwal.getText());
+            pst.setString(2, hari.getText());
+            pst.setString(3, waktu.getText());
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
+            conn.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan: " + e.getMessage());
+            e.printStackTrace(); // Untuk mencetak detail stack trace ke konsol
+        }
+    }//GEN-LAST:event_buttonTambahShiftActionPerformed
+
+    private void buttonUpdateShiftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateShiftActionPerformed
+        // TODO add your handling code here:
+         try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
+            String sql = "UPDATE shift SET hari = ?, waktu = ? where kd_shift = ?;";
+            PreparedStatement pst = conn.prepareStatement(sql);
+
+            pst.setString(1, upKdjadwal.getText());
+            pst.setString(2, upHari.getText());
+            pst.setString(3, upWaktu.getText());
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Data berhasil diperbarui");
+            conn.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan: " + e.getMessage());
+            e.printStackTrace(); // Untuk mencetak detail stack trace ke konsol
+        }
+    }//GEN-LAST:event_buttonUpdateShiftActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3401,6 +3487,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> genderKaryawan;
     private javax.swing.JComboBox<String> genderPasien;
     private javax.swing.JTextField hargaObat;
+    private javax.swing.JTextField hari;
     private javax.swing.JTextField hpDokter;
     private javax.swing.JTextField hpKaryawan;
     private javax.swing.JTextField hpPasien;
@@ -3416,6 +3503,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTabbedPane karyawanTabbedPane;
     private javax.swing.JTextField kdBagian;
     private javax.swing.JTextField kdBagianKaryawan;
+    private javax.swing.JTextField kdJadwal;
     private javax.swing.JTextField kdObat;
     private javax.swing.JTextField kdShift;
     private javax.swing.JLabel labelAlamat;
@@ -3553,8 +3641,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField textDiagnosaPemeriksaan;
     private javax.swing.JTextField textDiagnosaPemeriksaan1;
     private javax.swing.JTextField textHapusPemeriksaan;
-    private javax.swing.JTextField textHariTambah;
-    private javax.swing.JTextField textHariUpdate;
     private javax.swing.JTextField textIDKaryawanPemeriksaan;
     private javax.swing.JTextField textIDKaryawanPemeriksaan1;
     private javax.swing.JTextField textIdKaryawan1;
@@ -3567,8 +3653,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField textKodeObatUpdate;
     private javax.swing.JTextField textKodePembayaran;
     private javax.swing.JTextField textKodeResep;
-    private javax.swing.JTextField textKodeShiftTambah;
-    private javax.swing.JTextField textKodeShiftUpdate;
     private javax.swing.JTextField textNIKPasienPemeriksaan;
     private javax.swing.JTextField textNIKPasienPemeriksaan1;
     private javax.swing.JTextField textNamaKaryawan1;
@@ -3580,25 +3664,27 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField textStokObatUpdate;
     private javax.swing.JTextField textTanggalLahirKaryawan1;
     private javax.swing.JTextField textTotalPembayaran;
-    private javax.swing.JTextField textWaktuTambah;
-    private javax.swing.JTextField textWaktuUpdate;
     private javax.swing.JTextField tglLahir;
     private javax.swing.JTextField tglLahirKaryawan;
     private javax.swing.JTextField upAlamatDokter;
     private javax.swing.JTextField upAlamatPasien;
     private javax.swing.JComboBox<String> upGenderDokter;
     private javax.swing.JComboBox<String> upGenderPasien;
+    private javax.swing.JTextField upHari;
     private javax.swing.JTextField upIdDokter;
     private javax.swing.JTextField upKdBagianDokter;
+    private javax.swing.JTextField upKdjadwal;
     private javax.swing.JTextField upNamaDokter;
     private javax.swing.JTextField upNamaPasien;
     private javax.swing.JTextField upNik;
     private javax.swing.JTextField upStr;
     private javax.swing.JTextField upTglDokter;
     private javax.swing.JTextField upUsiaPasien;
+    private javax.swing.JTextField upWaktu;
     private javax.swing.JTextField uphargaObat;
     private javax.swing.JTextField uphpDokter;
     private javax.swing.JTextField uphpPasien;
     private javax.swing.JTextField usiaPasien;
+    private javax.swing.JTextField waktu;
     // End of variables declaration//GEN-END:variables
 }

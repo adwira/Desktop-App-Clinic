@@ -2461,6 +2461,9 @@
                       <Dimension value="[72, 25]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonUpdateObatActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelNamaObat1">
                   <Properties>
@@ -3277,17 +3280,17 @@
                               <Group type="102" attributes="0">
                                   <Component id="labelWaktuTambah" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textWaktuTambah" max="32767" attributes="0"/>
+                                  <Component id="waktu" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelHariTambah" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textHariTambah" max="32767" attributes="0"/>
+                                  <Component id="hari" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelKodeShiftTambah" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textKodeShiftTambah" max="32767" attributes="0"/>
+                                  <Component id="kdJadwal" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
@@ -3305,17 +3308,17 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelKodeShiftTambah" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textKodeShiftTambah" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="kdJadwal" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelHariTambah" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textHariTambah" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="hari" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelWaktuTambah" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textWaktuTambah" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="waktu" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="282" max="32767" attributes="0"/>
                           <Component id="buttonTambahShift" min="-2" max="-2" attributes="0"/>
@@ -3333,14 +3336,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textKodeShiftTambah">
+                <Component class="javax.swing.JTextField" name="kdJadwal">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textKodeShiftTambahActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="kdJadwalActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelHariTambah">
@@ -3351,14 +3354,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textHariTambah">
+                <Component class="javax.swing.JTextField" name="hari">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textHariTambahActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hariActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelWaktuTambah">
@@ -3369,14 +3372,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textWaktuTambah">
+                <Component class="javax.swing.JTextField" name="waktu">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textWaktuTambahActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="waktuActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="buttonTambahShift">
@@ -3386,6 +3389,9 @@
                       <Dimension value="[80, 25]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTambahShiftActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -3407,17 +3413,17 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="labelWaktuTambah1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textWaktuUpdate" max="32767" attributes="0"/>
+                                  <Component id="upWaktu" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelHariTambah1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textHariUpdate" max="32767" attributes="0"/>
+                                  <Component id="upHari" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelKodeShiftUpdate" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textKodeShiftUpdate" max="32767" attributes="0"/>
+                                  <Component id="upKdjadwal" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
@@ -3435,17 +3441,17 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelKodeShiftUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textKodeShiftUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upKdjadwal" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelHariTambah1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textHariUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upHari" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelWaktuTambah1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textWaktuUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upWaktu" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="282" max="32767" attributes="0"/>
                           <Component id="buttonUpdateShift" min="-2" max="-2" attributes="0"/>
@@ -3463,14 +3469,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textKodeShiftUpdate">
+                <Component class="javax.swing.JTextField" name="upKdjadwal">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textKodeShiftUpdateActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="upKdjadwalActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelHariTambah1">
@@ -3481,14 +3487,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textHariUpdate">
+                <Component class="javax.swing.JTextField" name="upHari">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textHariUpdateActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="upHariActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelWaktuTambah1">
@@ -3499,14 +3505,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textWaktuUpdate">
+                <Component class="javax.swing.JTextField" name="upWaktu">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textWaktuUpdateActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="upWaktuActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="buttonUpdateShift">
@@ -3516,6 +3522,9 @@
                       <Dimension value="[80, 25]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonUpdateShiftActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
