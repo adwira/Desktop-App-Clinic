@@ -181,6 +181,8 @@ public class Admin extends javax.swing.JFrame {
         namaObat = new javax.swing.JTextField();
         labelStok = new javax.swing.JLabel();
         stokObat = new javax.swing.JTextField();
+        hargaObat = new javax.swing.JTextField();
+        labelStok2 = new javax.swing.JLabel();
         panelPerbaruiObat = new javax.swing.JPanel();
         textKodeObatUpdate = new javax.swing.JTextField();
         labelObat1 = new javax.swing.JLabel();
@@ -189,6 +191,8 @@ public class Admin extends javax.swing.JFrame {
         textNamaObatUpdate = new javax.swing.JTextField();
         labelStok1 = new javax.swing.JLabel();
         textStokObatUpdate = new javax.swing.JTextField();
+        uphargaObat = new javax.swing.JTextField();
+        labelStok3 = new javax.swing.JLabel();
         panelCariObat = new javax.swing.JPanel();
         textCariObat = new javax.swing.JTextField();
         buttonSearchObat = new javax.swing.JButton();
@@ -1506,6 +1510,11 @@ public class Admin extends javax.swing.JFrame {
 
         stokObat.setPreferredSize(new java.awt.Dimension(300, 25));
 
+        hargaObat.setPreferredSize(new java.awt.Dimension(300, 25));
+
+        labelStok2.setText("Harga Obat");
+        labelStok2.setPreferredSize(new java.awt.Dimension(90, 25));
+
         javax.swing.GroupLayout panelTambahObatLayout = new javax.swing.GroupLayout(panelTambahObat);
         panelTambahObat.setLayout(panelTambahObatLayout);
         panelTambahObatLayout.setHorizontalGroup(
@@ -1514,17 +1523,21 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addGroup(panelTambahObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panelTambahObatLayout.createSequentialGroup()
-                        .addComponent(labelStok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(stokObat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelTambahObatLayout.createSequentialGroup()
                         .addComponent(labelNamaObat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
                         .addComponent(namaObat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelTambahObatLayout.createSequentialGroup()
                         .addComponent(labelObat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(kdObat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(kdObat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelTambahObatLayout.createSequentialGroup()
+                        .addGroup(panelTambahObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelStok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelStok2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addGroup(panelTambahObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hargaObat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(stokObat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(170, 170, 170))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTambahObatLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1546,7 +1559,11 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(panelTambahObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(stokObat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelStok, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(panelTambahObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hargaObat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelStok2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
                 .addComponent(buttonTambahObat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
         );
@@ -1571,30 +1588,39 @@ public class Admin extends javax.swing.JFrame {
 
         textStokObatUpdate.setPreferredSize(new java.awt.Dimension(300, 25));
 
+        uphargaObat.setPreferredSize(new java.awt.Dimension(300, 25));
+
+        labelStok3.setText("Harga Obat");
+        labelStok3.setPreferredSize(new java.awt.Dimension(90, 25));
+
         javax.swing.GroupLayout panelPerbaruiObatLayout = new javax.swing.GroupLayout(panelPerbaruiObat);
         panelPerbaruiObat.setLayout(panelPerbaruiObatLayout);
         panelPerbaruiObatLayout.setHorizontalGroup(
             panelPerbaruiObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPerbaruiObatLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(panelPerbaruiObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelPerbaruiObatLayout.createSequentialGroup()
-                        .addComponent(labelStok1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(textStokObatUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelPerbaruiObatLayout.createSequentialGroup()
-                        .addComponent(labelNamaObat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(textNamaObatUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelPerbaruiObatLayout.createSequentialGroup()
-                        .addComponent(labelObat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(textKodeObatUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(170, 170, 170))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPerbaruiObatLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonUpdateObat, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57))
+            .addGroup(panelPerbaruiObatLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(panelPerbaruiObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPerbaruiObatLayout.createSequentialGroup()
+                        .addComponent(labelStok3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(uphargaObat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPerbaruiObatLayout.createSequentialGroup()
+                        .addComponent(labelStok1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(textStokObatUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPerbaruiObatLayout.createSequentialGroup()
+                        .addComponent(labelNamaObat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(textNamaObatUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPerbaruiObatLayout.createSequentialGroup()
+                        .addComponent(labelObat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(textKodeObatUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(170, 170, 170))
         );
         panelPerbaruiObatLayout.setVerticalGroup(
             panelPerbaruiObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1611,7 +1637,11 @@ public class Admin extends javax.swing.JFrame {
                 .addGroup(panelPerbaruiObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textStokObatUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelStok1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(282, 282, 282)
+                .addGap(18, 18, 18)
+                .addGroup(panelPerbaruiObatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(uphargaObat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelStok3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
                 .addComponent(buttonUpdateObat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
         );
@@ -3370,6 +3400,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> genderDokter;
     private javax.swing.JComboBox<String> genderKaryawan;
     private javax.swing.JComboBox<String> genderPasien;
+    private javax.swing.JTextField hargaObat;
     private javax.swing.JTextField hpDokter;
     private javax.swing.JTextField hpKaryawan;
     private javax.swing.JTextField hpPasien;
@@ -3450,6 +3481,8 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JLabel labelPerbaruiKodePemeriksaan;
     private javax.swing.JLabel labelStok;
     private javax.swing.JLabel labelStok1;
+    private javax.swing.JLabel labelStok2;
+    private javax.swing.JLabel labelStok3;
     private javax.swing.JLabel labelTglLahir;
     private javax.swing.JLabel labelTglLahir1;
     private javax.swing.JLabel labelTglLahirKaryawan;
@@ -3563,6 +3596,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField upStr;
     private javax.swing.JTextField upTglDokter;
     private javax.swing.JTextField upUsiaPasien;
+    private javax.swing.JTextField uphargaObat;
     private javax.swing.JTextField uphpDokter;
     private javax.swing.JTextField uphpPasien;
     private javax.swing.JTextField usiaPasien;
