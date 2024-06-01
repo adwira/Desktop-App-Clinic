@@ -64,6 +64,7 @@ public class Doctor extends javax.swing.JFrame {
         scrollPaneResep = new javax.swing.JScrollPane();
         tableResepObat = new javax.swing.JTable();
         buttonCetakResepDoctor = new javax.swing.JButton();
+        buttonLogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -141,7 +142,7 @@ public class Doctor extends javax.swing.JFrame {
                 .addGroup(panelDiagnosaPemeriksaanDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelDiagnosa2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(scrollPaneDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(buttonDiagnosaPemeriksaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
@@ -225,9 +226,9 @@ public class Doctor extends javax.swing.JFrame {
                 .addGroup(panelTambahObatResepDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelObat4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(scrollPaneDeskripsiResep, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(buttonTambahResepDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addGap(50, 50, 50))
         );
 
         resepDoctorTabbedPane.addTab("Buat Resep", panelTambahObatResepDoctor);
@@ -284,7 +285,7 @@ public class Doctor extends javax.swing.JFrame {
             .addGroup(panelResepObatDoctorLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(scrollPaneResep, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(buttonCetakResepDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
@@ -293,6 +294,11 @@ public class Doctor extends javax.swing.JFrame {
 
         doctorTabbedPane.addTab("Resep", resepDoctorTabbedPane);
 
+        buttonLogOut.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        buttonLogOut.setForeground(new java.awt.Color(255, 0, 0));
+        buttonLogOut.setText("Log Out");
+        buttonLogOut.setPreferredSize(new java.awt.Dimension(80, 25));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -300,16 +306,20 @@ public class Doctor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(buttonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65))
             .addComponent(doctorTabbedPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jLabel2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(buttonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(doctorTabbedPane))
+                .addComponent(doctorTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE))
         );
 
         pack();
@@ -487,6 +497,7 @@ public class Doctor extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCetakResepDoctor;
     private javax.swing.JButton buttonDiagnosaPemeriksaan;
+    private javax.swing.JButton buttonLogOut;
     private javax.swing.JButton buttonTambahResepDoctor;
     private javax.swing.JTabbedPane doctorTabbedPane;
     private javax.swing.JLabel jLabel2;

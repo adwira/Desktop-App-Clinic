@@ -275,6 +275,7 @@ public class Admin extends javax.swing.JFrame {
         textSearchPembayaran = new javax.swing.JTextField();
         scrollPanePembayaran = new javax.swing.JScrollPane();
         tableSearchPembayaran = new javax.swing.JTable();
+        buttonLogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 600));
@@ -2451,6 +2452,11 @@ public class Admin extends javax.swing.JFrame {
 
         adminTabbedPane.addTab("Pembayaran", pembayaranTabbedPane);
 
+        buttonLogOut.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        buttonLogOut.setForeground(new java.awt.Color(255, 0, 0));
+        buttonLogOut.setText("Log Out");
+        buttonLogOut.setPreferredSize(new java.awt.Dimension(80, 25));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2458,15 +2464,19 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(buttonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
             .addComponent(adminTabbedPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jLabel1)
-                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(buttonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
                 .addComponent(adminTabbedPane))
         );
 
@@ -2968,6 +2978,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JButton buttonHapusKaryawan;
     private javax.swing.JButton buttonHapusKodePemeriksaan;
     private javax.swing.JButton buttonHapusPasien;
+    private javax.swing.JButton buttonLogOut;
     private javax.swing.JButton buttonPerbaruiPasien;
     private javax.swing.JButton buttonPerbaruiPemeriksaan;
     private javax.swing.JButton buttonSearch;
