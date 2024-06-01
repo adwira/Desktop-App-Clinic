@@ -103,11 +103,11 @@ public class Admin extends javax.swing.JFrame {
         upIdDokter = new javax.swing.JTextField();
         upKdBagianDokter = new javax.swing.JTextField();
         upNamaDokter = new javax.swing.JTextField();
-        upGenderDokter = new javax.swing.JTextField();
         upAlamatDokter = new javax.swing.JTextField();
         upTglDokter = new javax.swing.JTextField();
         uphpDokter = new javax.swing.JTextField();
         buttonUpdate = new javax.swing.JButton();
+        perbaruiGenderDokter = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         textSearch = new javax.swing.JTextField();
         buttonSearch = new javax.swing.JButton();
@@ -794,8 +794,6 @@ public class Admin extends javax.swing.JFrame {
 
         upNamaDokter.setPreferredSize(new java.awt.Dimension(300, 25));
 
-        upGenderDokter.setPreferredSize(new java.awt.Dimension(300, 25));
-
         upAlamatDokter.setPreferredSize(new java.awt.Dimension(300, 25));
 
         upTglDokter.setPreferredSize(new java.awt.Dimension(300, 25));
@@ -814,6 +812,8 @@ public class Admin extends javax.swing.JFrame {
                 buttonUpdateActionPerformed(evt);
             }
         });
+
+        perbaruiGenderDokter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Laki-laki", "Perempuan" }));
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
@@ -835,14 +835,6 @@ public class Admin extends javax.swing.JFrame {
                         .addGap(57, 57, 57)
                         .addComponent(upAlamatDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
-                        .addComponent(labelJenisKelamin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(upGenderDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel23Layout.createSequentialGroup()
-                        .addComponent(labelNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(upNamaDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelKDBagian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
                         .addComponent(upKdBagianDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -853,7 +845,17 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelNoSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(upStr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(upStr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel23Layout.createSequentialGroup()
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelJenisKelamin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel23Layout.createSequentialGroup()
+                                .addComponent(perbaruiGenderDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(upNamaDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(167, 167, 167))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -882,7 +884,7 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelJenisKelamin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(upGenderDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(perbaruiGenderDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelAlamat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3110,6 +3112,7 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField passwordKaryawan1;
     private javax.swing.JTabbedPane pembayaranTabbedPane;
     private javax.swing.JTabbedPane pemeriksaanTabbedPane;
+    private javax.swing.JComboBox<String> perbaruiGenderDokter;
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JScrollPane scrollPaneKaryawan;
     private javax.swing.JScrollPane scrollPaneObat;
@@ -3183,7 +3186,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField tglLahir;
     private javax.swing.JTextField tglLahirKaryawan;
     private javax.swing.JTextField upAlamatDokter;
-    private javax.swing.JTextField upGenderDokter;
     private javax.swing.JTextField upIdDokter;
     private javax.swing.JTextField upKdBagianDokter;
     private javax.swing.JTextField upNamaDokter;
