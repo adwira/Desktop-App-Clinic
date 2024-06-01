@@ -98,22 +98,22 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelNoHP" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textNoHpPasien" pref="303" max="32767" attributes="0"/>
+                                  <Component id="hpPasien" pref="303" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelAlamatPasien" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textAlamatPasien" max="32767" attributes="0"/>
+                                  <Component id="alamatPasien" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelNamaPasien" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textNamaPasien" max="32767" attributes="0"/>
+                                  <Component id="namaPasien" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelNikPasien" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textNikPasien" max="32767" attributes="0"/>
+                                  <Component id="nikPasien" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -123,10 +123,10 @@
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="comboBoxJenisKelaminPasien" min="-2" max="-2" attributes="0"/>
+                                          <Component id="genderPasien" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="textUsiaPasien" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="usiaPasien" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -145,32 +145,32 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNikPasien" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textNikPasien" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="nikPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNamaPasien" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textNamaPasien" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="namaPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelUsiaPasien" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textUsiaPasien" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="usiaPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelJenisKelaminPasien" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="comboBoxJenisKelaminPasien" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="genderPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelAlamatPasien" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textAlamatPasien" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="alamatPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNoHP" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textNoHpPasien" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="hpPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="153" max="32767" attributes="0"/>
                           <Component id="buttonTambahPasien" min="-2" max="-2" attributes="0"/>
@@ -228,35 +228,35 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNikPasien">
+                <Component class="javax.swing.JTextField" name="nikPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNamaPasien">
+                <Component class="javax.swing.JTextField" name="namaPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textUsiaPasien">
+                <Component class="javax.swing.JTextField" name="usiaPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textAlamatPasien">
+                <Component class="javax.swing.JTextField" name="alamatPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNoHpPasien">
+                <Component class="javax.swing.JTextField" name="hpPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
@@ -280,7 +280,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTambahPasienActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="comboBoxJenisKelaminPasien">
+                <Component class="javax.swing.JComboBox" name="genderPasien">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="2">
@@ -313,22 +313,22 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelNoHP1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textNoHpPasien1" pref="303" max="32767" attributes="0"/>
+                                  <Component id="uphpPasien" pref="303" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelAlamatPasien1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textAlamatPasien1" max="32767" attributes="0"/>
+                                  <Component id="upAlamatPasien" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelNamaPasien1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textNamaPasien1" max="32767" attributes="0"/>
+                                  <Component id="upNamaPasien" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelNikPasien1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textNikPasien1" max="32767" attributes="0"/>
+                                  <Component id="upNik" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -338,10 +338,10 @@
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="comboBoxJenisKelaminPasien1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="upGenderPasien" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="textUsiaPasien1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="upUsiaPasien" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -360,32 +360,32 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNikPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textNikPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upNik" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNamaPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textNamaPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upNamaPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelUsiaPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textUsiaPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upUsiaPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelJenisKelaminPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="comboBoxJenisKelaminPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upGenderPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelAlamatPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textAlamatPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upAlamatPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNoHP1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textNoHpPasien1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="uphpPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="153" max="32767" attributes="0"/>
                           <Component id="buttonPerbaruiPasien" min="-2" max="-2" attributes="0"/>
@@ -412,35 +412,35 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPerbaruiPasienActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNoHpPasien1">
+                <Component class="javax.swing.JTextField" name="uphpPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textAlamatPasien1">
+                <Component class="javax.swing.JTextField" name="upAlamatPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textUsiaPasien1">
+                <Component class="javax.swing.JTextField" name="upUsiaPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNamaPasien1">
+                <Component class="javax.swing.JTextField" name="upNamaPasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNikPasien1">
+                <Component class="javax.swing.JTextField" name="upNik">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
@@ -495,7 +495,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="comboBoxJenisKelaminPasien1">
+                <Component class="javax.swing.JComboBox" name="upGenderPasien">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="2">
@@ -615,7 +615,7 @@
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                           <Component id="labelHapusPasien" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="textHapusPasien" pref="350" max="32767" attributes="0"/>
+                          <Component id="deletePasien" pref="350" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="buttonHapusPasien" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
@@ -627,7 +627,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="textHapusPasien" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="deletePasien" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="buttonHapusPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelHapusPasien" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -656,14 +656,14 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonHapusPasienActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textHapusPasien">
+                <Component class="javax.swing.JTextField" name="deletePasien">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textHapusPasienActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deletePasienActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -999,7 +999,7 @@
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="perbaruiGenderDokter" min="-2" max="-2" attributes="0"/>
+                                          <Component id="upGenderDokter" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="upNamaDokter" max="32767" attributes="0"/>
@@ -1041,7 +1041,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelJenisKelamin1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="perbaruiGenderDokter" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upGenderDokter" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1193,7 +1193,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonUpdateActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="perbaruiGenderDokter">
+                <Component class="javax.swing.JComboBox" name="upGenderDokter">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="2">
@@ -1225,7 +1225,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="scrollPane" pref="554" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="textSearch" max="32767" attributes="0"/>
+                                  <Component id="textCariDokter" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="buttonSearch" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1239,7 +1239,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="textSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="textCariDokter" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="buttonSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -1250,14 +1250,14 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="textSearch">
+                <Component class="javax.swing.JTextField" name="textCariDokter">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textSearchActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textCariDokterActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="buttonSearch">
@@ -1278,7 +1278,7 @@
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTable" name="tableSearch">
+                    <Component class="javax.swing.JTable" name="tableCariDokter">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="4" rowCount="4">
@@ -2231,17 +2231,17 @@
                               <Group type="102" attributes="0">
                                   <Component id="labelStok" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textStokObatTambah" max="32767" attributes="0"/>
+                                  <Component id="stokObat" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="labelNamaObat" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textNamaObat" max="32767" attributes="0"/>
+                                  <Component id="namaObat" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Component id="labelObat" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textKodeObat" max="32767" attributes="0"/>
+                                  <Component id="kdObat" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="170" max="-2" attributes="0"/>
@@ -2258,17 +2258,17 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="textKodeObat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="kdObat" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelObat" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="textNamaObat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="namaObat" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelNamaObat" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="textStokObatTambah" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="stokObat" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelStok" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="282" max="32767" attributes="0"/>
@@ -2279,7 +2279,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="textKodeObat">
+                <Component class="javax.swing.JTextField" name="kdObat">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
@@ -2301,6 +2301,9 @@
                       <Dimension value="[72, 25]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTambahObatActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelNamaObat">
                   <Properties>
@@ -2310,7 +2313,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNamaObat">
+                <Component class="javax.swing.JTextField" name="namaObat">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
@@ -2325,7 +2328,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textStokObatTambah">
+                <Component class="javax.swing.JTextField" name="stokObat">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
@@ -2472,7 +2475,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="scrollPaneObat" alignment="0" pref="554" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="textSearchObat" max="32767" attributes="0"/>
+                                  <Component id="textCariObat" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="buttonSearchObat" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -2486,7 +2489,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="textSearchObat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="textCariObat" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="buttonSearchObat" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -2497,14 +2500,14 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="textSearchObat">
+                <Component class="javax.swing.JTextField" name="textCariObat">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textSearchObatActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textCariObatActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="buttonSearchObat">
@@ -2584,7 +2587,7 @@
                           <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                           <Component id="labelDelete1" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                          <Component id="textDeleteObat" pref="350" max="32767" attributes="0"/>
+                          <Component id="deleteObat" pref="350" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="buttonDeleteObat" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
@@ -2596,7 +2599,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="textDeleteObat" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="deleteObat" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="buttonDeleteObat" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="labelDelete1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -2606,14 +2609,14 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="textDeleteObat">
+                <Component class="javax.swing.JTextField" name="deleteObat">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textDeleteObatActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteObatActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="buttonDeleteObat">
