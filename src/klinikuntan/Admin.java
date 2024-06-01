@@ -6,6 +6,9 @@ package klinikuntan;
 
 import javax.swing.JOptionPane;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author USER
@@ -96,14 +99,14 @@ public class Admin extends javax.swing.JFrame {
         labelAlamat1 = new javax.swing.JLabel();
         labelTglLahir1 = new javax.swing.JLabel();
         LabelNoHP1 = new javax.swing.JLabel();
-        textNoStr1 = new javax.swing.JTextField();
-        textIDKaryawan1 = new javax.swing.JTextField();
-        textKdBagian1 = new javax.swing.JTextField();
-        textNama1 = new javax.swing.JTextField();
-        textJenisKelamin1 = new javax.swing.JTextField();
-        textAlamat1 = new javax.swing.JTextField();
-        textTanggalLahir1 = new javax.swing.JTextField();
-        textNoHP1 = new javax.swing.JTextField();
+        upStr = new javax.swing.JTextField();
+        upIdDokter = new javax.swing.JTextField();
+        upKdBagianDokter = new javax.swing.JTextField();
+        upNamaDokter = new javax.swing.JTextField();
+        upGenderDokter = new javax.swing.JTextField();
+        upAlamatDokter = new javax.swing.JTextField();
+        upTglDokter = new javax.swing.JTextField();
+        uphpDokter = new javax.swing.JTextField();
         buttonUpdate = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         textSearch = new javax.swing.JTextField();
@@ -783,24 +786,24 @@ public class Admin extends javax.swing.JFrame {
         LabelNoHP1.setText("NO HP");
         LabelNoHP1.setPreferredSize(new java.awt.Dimension(90, 25));
 
-        textNoStr1.setPreferredSize(new java.awt.Dimension(300, 25));
+        upStr.setPreferredSize(new java.awt.Dimension(300, 25));
 
-        textIDKaryawan1.setPreferredSize(new java.awt.Dimension(300, 25));
+        upIdDokter.setPreferredSize(new java.awt.Dimension(300, 25));
 
-        textKdBagian1.setPreferredSize(new java.awt.Dimension(300, 25));
+        upKdBagianDokter.setPreferredSize(new java.awt.Dimension(300, 25));
 
-        textNama1.setPreferredSize(new java.awt.Dimension(300, 25));
+        upNamaDokter.setPreferredSize(new java.awt.Dimension(300, 25));
 
-        textJenisKelamin1.setPreferredSize(new java.awt.Dimension(300, 25));
+        upGenderDokter.setPreferredSize(new java.awt.Dimension(300, 25));
 
-        textAlamat1.setPreferredSize(new java.awt.Dimension(300, 25));
+        upAlamatDokter.setPreferredSize(new java.awt.Dimension(300, 25));
 
-        textTanggalLahir1.setPreferredSize(new java.awt.Dimension(300, 25));
+        upTglDokter.setPreferredSize(new java.awt.Dimension(300, 25));
 
-        textNoHP1.setPreferredSize(new java.awt.Dimension(300, 25));
-        textNoHP1.addActionListener(new java.awt.event.ActionListener() {
+        uphpDokter.setPreferredSize(new java.awt.Dimension(300, 25));
+        uphpDokter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textNoHP1ActionPerformed(evt);
+                uphpDokterActionPerformed(evt);
             }
         });
 
@@ -822,35 +825,35 @@ public class Admin extends javax.swing.JFrame {
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(LabelNoHP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textNoHP1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE))
+                        .addComponent(uphpDokter, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelTglLahir1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textTanggalLahir1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(upTglDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelAlamat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textAlamat1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(upAlamatDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelJenisKelamin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textJenisKelamin1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(upGenderDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textNama1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(upNamaDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelKDBagian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textKdBagian1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(upKdBagianDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelIDKaryawan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textIDKaryawan1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(upIdDokter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel23Layout.createSequentialGroup()
                         .addComponent(labelNoSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(57, 57, 57)
-                        .addComponent(textNoStr1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(upStr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(167, 167, 167))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -863,35 +866,35 @@ public class Admin extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNoSTR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textNoStr1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upStr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelIDKaryawan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textIDKaryawan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upIdDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelKDBagian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textKdBagian1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upKdBagianDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textNama1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upNamaDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelJenisKelamin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textJenisKelamin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upGenderDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelAlamat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textAlamat1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upAlamatDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelTglLahir1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textTanggalLahir1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(upTglDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelNoHP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textNoHP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(uphpDokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(buttonUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
@@ -2472,9 +2475,9 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_hpDokterActionPerformed
 
-    private void textNoHP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNoHP1ActionPerformed
+    private void uphpDokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uphpDokterActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textNoHP1ActionPerformed
+    }//GEN-LAST:event_uphpDokterActionPerformed
 
     private void buttonTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTambahActionPerformed
         try {
@@ -2506,6 +2509,28 @@ public class Admin extends javax.swing.JFrame {
 
     private void buttonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateActionPerformed
         // TODO add your handling code here:
+        try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
+            String sql = "UPDATE dokter SET id_karyawan = ?, kd_bagian = ?, nama = ?, jenis_kelamin = ?, alamat = ?, tgl_lahir = ?, no_hp = ? where no_str = ?;";
+            PreparedStatement pst = conn.prepareStatement(sql);
+
+            pst.setString(1, upStr.getText());
+            pst.setString(2, upKdBagianDokter.getText());
+            pst.setString(3, upNamaDokter.getText());
+//            pst.setString(4, upGenderDokter.getSelectedItem().toString());
+            pst.setString(5, upAlamatDokter.getText());
+            pst.setString(6, upTglDokter.getText());
+            pst.setString(7, uphpDokter.getText());
+            pst.setString(8, upStr.getText());
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Data berhasil diperbarui");
+            conn.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan " + e.getMessage());
+        }
     }//GEN-LAST:event_buttonUpdateActionPerformed
 
     private void textSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textSearchActionPerformed
@@ -2700,10 +2725,63 @@ public class Admin extends javax.swing.JFrame {
 
     private void buttonTambahPemeriksaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTambahPemeriksaanActionPerformed
         // TODO add your handling code here:
+        try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+            String sql = "INSERT INTO pemeriksaan(nik, kd_bagian, id_karyawan, diagnosa, keluhan, tgl_periksa) VALUES(?, ?, ?, ?,?,curdate());";
+            PreparedStatement pst = conn.prepareStatement(sql);
+
+            pst.setString(1, textNIKPasienPemeriksaan.getText());
+            pst.setString(2, textKodeBagianPemeriksaan.getText());
+            pst.setString(3, textIDKaryawanPemeriksaan.getText());
+            pst.setString(4, textDiagnosaPemeriksaan.getText());
+            pst.setString(5, textKeluhanPemeriksaan.getText());
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
+            
+            
+            conn.close();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan");
+        }
     }//GEN-LAST:event_buttonTambahPemeriksaanActionPerformed
 
     private void buttonPerbaruiPemeriksaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPerbaruiPemeriksaanActionPerformed
         // TODO add your handling code here:
+        try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+            String kd_periksa = textPerbaruiKodePemeriksaan.getText();
+            String nik = textNIKPasienPemeriksaan1.getText();
+            String kodeBagian = textKodeBagianPemeriksaan1.getText(); // Assuming this is the value for kd_bagian
+            String idKaryawan = textIDKaryawanPemeriksaan1.getText(); // Assuming this is the value for id_karyawan
+            String diagnosa = textDiagnosaPemeriksaan1.getText(); // Assuming this is the value for Diagnosa
+            String keluhan = textKeluhanPemeriksaan1.getText();
+            String sql = "UPDATE pemeriksaan SET "
+                    + "kd_bagian = IFNULL(?, kd_bagian), "
+                    + // Use IFNULL to set NULL if value is null
+                    "id_karyawan = IFNULL(?, id_karyawan), "
+                    + "Diagnosa = IFNULL(?, Diagnosa), "
+                    + "keluhan = IFNULL(?, keluhan) "
+                    + "WHERE kd_periksa = ?";
+            PreparedStatement pst = conn.prepareStatement(sql);
+
+            pst.setString(1, kodeBagian == null ? null : kodeBagian); // Check for null values
+            pst.setString(2, idKaryawan == null ? null : idKaryawan);
+            pst.setString(3, diagnosa == null ? null : diagnosa);
+            pst.setString(4, keluhan == null ? null : keluhan);
+            pst.setString(5, kd_periksa);
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Data berhasil diperbarui");
+            conn.close();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan");
+        }
     }//GEN-LAST:event_buttonPerbaruiPemeriksaanActionPerformed
 
     private void textCariPemeriksaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textCariPemeriksaanActionPerformed
@@ -2712,10 +2790,87 @@ public class Admin extends javax.swing.JFrame {
 
     private void buttonCariPemeriksaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCariPemeriksaanActionPerformed
         // TODO add your handling code here:
+        try {
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+            DefaultTableModel model = new DefaultTableModel();
+//            String query = "select * from pemeriksaan where kd_periksa  like %?% or nik like %?% or id_karyawan like %?%";
+
+            String query = "select * from pemeriksaan where kd_periksa like ? OR nik like ? OR id_karyawan like ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            String userInput = textCariPemeriksaan.getText();
+            stmt.setString(1, "%" + userInput + "%"); // Add wildcards before and after user input
+            stmt.setString(2, "%" + userInput + "%");
+            stmt.setString(3, "%" + userInput + "%");
+
+            Object[] header = {"Kode Periksa", "NIK", "Kode Bagian", "ID Karyawan", "Keluhan", "Diagnosa", "Tanggal Periksa"};
+            Object[][] matchedData = null;
+            List<Object[]> rows = new ArrayList<>();
+//             Object[] rowData;// Assuming 10 rows and 3 columns (adjust as needed)
+            int rowCount = 0;
+
+            try {
+                ResultSet rs = stmt.executeQuery();
+
+                // Process query results
+                while (rs.next()) {
+                    String kd_periksa = rs.getString("kd_periksa");
+                    String nik = rs.getString("nik");
+                    String kd_bagian = rs.getString("kd_bagian");
+                    String id_karyawan = rs.getString("id_karyawan");
+                    String keluhan = rs.getString("Keluhan");
+                    String diagnosa = rs.getString("diagnosa");
+                    String tgl_periksa = rs.getString("tgl_periksa");
+
+                    // Compare data to user input
+                    if (String.valueOf(kd_periksa).contains(userInput) || nik.contains(userInput)
+                            || kd_bagian.contains(userInput) || id_karyawan.contains(userInput)) {
+
+                        System.out.println(nik);
+                        String[] rowData = {kd_periksa, nik, kd_bagian, id_karyawan, keluhan, diagnosa, tgl_periksa};
+
+                        // Add the row data to the table model
+//                        model.addRow(rowData);
+                        rows.add(rowData);
+//                        
+                        rowCount++;
+
+                    }
+                }
+
+                matchedData = new Object[rows.size()][];
+                for (int i = 0; i < rows.size(); i++) {
+                    matchedData[i] = rows.get(i);
+                }
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "error");
+            }
+            model.setDataVector(matchedData, header);
+            tableCariPemeriksaan.setModel(model);
+            conn.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan");
+        }
     }//GEN-LAST:event_buttonCariPemeriksaanActionPerformed
 
     private void buttonHapusKodePemeriksaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHapusKodePemeriksaanActionPerformed
         // TODO add your handling code here:
+        try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+//            String find = textHapusPemeriksaan.getText();
+            String sql = "delete from pemeriksaan where kd_periksa = ?";
+            PreparedStatement pst = conn.prepareStatement(sql);
+
+            pst.setString(1, textHapusPemeriksaan.getText());
+            pst.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Data berhasil diperbarui");
+            conn.close();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan");
+        }
     }//GEN-LAST:event_buttonHapusKodePemeriksaanActionPerformed
 
     private void textHapusPemeriksaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textHapusPemeriksaanActionPerformed
@@ -2971,7 +3126,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTable tableSearchObat;
     private javax.swing.JTable tableSearchPembayaran;
     private javax.swing.JTable tableSearchShift;
-    private javax.swing.JTextField textAlamat1;
     private javax.swing.JTextField textAlamatKaryawan1;
     private javax.swing.JTextField textAlamatPasien;
     private javax.swing.JTextField textAlamatPasien1;
@@ -2986,12 +3140,9 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField textHapusPemeriksaan;
     private javax.swing.JTextField textHariTambah;
     private javax.swing.JTextField textHariUpdate;
-    private javax.swing.JTextField textIDKaryawan1;
     private javax.swing.JTextField textIDKaryawanPemeriksaan;
     private javax.swing.JTextField textIDKaryawanPemeriksaan1;
     private javax.swing.JTextField textIdKaryawan1;
-    private javax.swing.JTextField textJenisKelamin1;
-    private javax.swing.JTextField textKdBagian1;
     private javax.swing.JTextField textKdBagianKaryawan1;
     private javax.swing.JTextField textKdShift1;
     private javax.swing.JTextField textKeluhanPemeriksaan;
@@ -3006,7 +3157,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField textKodeShiftUpdate;
     private javax.swing.JTextField textNIKPasienPemeriksaan;
     private javax.swing.JTextField textNIKPasienPemeriksaan1;
-    private javax.swing.JTextField textNama1;
     private javax.swing.JTextField textNamaKaryawan1;
     private javax.swing.JTextField textNamaObat;
     private javax.swing.JTextField textNamaObatUpdate;
@@ -3014,11 +3164,9 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField textNamaPasien1;
     private javax.swing.JTextField textNikPasien;
     private javax.swing.JTextField textNikPasien1;
-    private javax.swing.JTextField textNoHP1;
     private javax.swing.JTextField textNoHPKaryawan1;
     private javax.swing.JTextField textNoHpPasien;
     private javax.swing.JTextField textNoHpPasien1;
-    private javax.swing.JTextField textNoStr1;
     private javax.swing.JTextField textPerbaruiKodePemeriksaan;
     private javax.swing.JTextField textSearch;
     private javax.swing.JTextField textSearchObat;
@@ -3026,7 +3174,6 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField textSearchShift;
     private javax.swing.JTextField textStokObatTambah;
     private javax.swing.JTextField textStokObatUpdate;
-    private javax.swing.JTextField textTanggalLahir1;
     private javax.swing.JTextField textTanggalLahirKaryawan1;
     private javax.swing.JTextField textTotalPembayaran;
     private javax.swing.JTextField textUsiaPasien;
@@ -3035,5 +3182,13 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JTextField textWaktuUpdate;
     private javax.swing.JTextField tglLahir;
     private javax.swing.JTextField tglLahirKaryawan;
+    private javax.swing.JTextField upAlamatDokter;
+    private javax.swing.JTextField upGenderDokter;
+    private javax.swing.JTextField upIdDokter;
+    private javax.swing.JTextField upKdBagianDokter;
+    private javax.swing.JTextField upNamaDokter;
+    private javax.swing.JTextField upStr;
+    private javax.swing.JTextField upTglDokter;
+    private javax.swing.JTextField uphpDokter;
     // End of variables declaration//GEN-END:variables
 }
