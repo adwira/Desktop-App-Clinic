@@ -42,7 +42,7 @@
                   <Component id="buttonLogOut" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="doctorTabbedPane" pref="546" max="32767" attributes="0"/>
+              <Component id="doctorTabbedPane" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -482,6 +482,9 @@
           <Dimension value="[80, 25]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonLogOutActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

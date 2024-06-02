@@ -298,6 +298,11 @@ public class Doctor extends javax.swing.JFrame {
         buttonLogOut.setForeground(new java.awt.Color(255, 0, 0));
         buttonLogOut.setText("Log Out");
         buttonLogOut.setPreferredSize(new java.awt.Dimension(80, 25));
+        buttonLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLogOutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -319,7 +324,7 @@ public class Doctor extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(buttonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(doctorTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE))
+                .addComponent(doctorTabbedPane))
         );
 
         pack();
@@ -455,6 +460,11 @@ public class Doctor extends javax.swing.JFrame {
         curkd_resep++;
         rows.clear();
     }//GEN-LAST:event_buttonCetakResepDoctorActionPerformed
+
+    private void buttonLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogOutActionPerformed
+        new LoginPage().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_buttonLogOutActionPerformed
 
     /**
      * @param args the command line arguments

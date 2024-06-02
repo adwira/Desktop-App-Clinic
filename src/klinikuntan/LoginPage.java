@@ -121,33 +121,42 @@ public class LoginPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        // TODO add your handling code here:
+        
         String id = kolomId.getText();
         String pw = kolomPw.getText();
-        
-        try{
+        try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
             String sql = "select * from karyawan where id_karyawan = ? AND password = ?";
             PreparedStatement pst = conn.prepareStatement(sql);
-            
+
             pst.setString(1, id);
             pst.setString(2, pw);
             ResultSet rs = pst.executeQuery();
-            while(rs.next()){
-                String idKaryawan = rs.getString("id_karyawan");
-                String password = rs.getString("password");
-                
-                if(id.equals(idKaryawan) && pw.equals(password)){
-                    new Dashboard().setVisible(true);
-                    dispose();
-                }
-                else{
-                    JOptionPane.showMessageDialog(null, "ID Karyawan dan Password Salah");
+            if (!rs.isBeforeFirst()) {
+                System.out.println("Tidak ditemukan pengguna dengan ID dan password yang diberikan");
+                JOptionPane.showMessageDialog(null, "ID Karyawan dan Password Salah");
+            } else {
+                while (rs.next()) {
+                    String idKaryawan = rs.getString("id_karyawan");
+                    String password = rs.getString("password");
+                    String jabatan = rs.getString("jabatan");
+                    System.out.println(idKaryawan.length());
+                    if (id.equals(idKaryawan) && pw.equals(password) && jabatan.contains("Dokter")) {
+                        System.out.println("dokter");
+                        new Doctor().setVisible(true);
+                        dispose();
+                    } else if (id.equals(idKaryawan) && pw.equals(password)) {
+                        System.out.println("admin");
+                        new Admin().setVisible(true);
+                        dispose();
+                    }
                 }
             }
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "asd");
+            
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan " + e.getMessage());
         }
     }//GEN-LAST:event_loginButtonActionPerformed
 
