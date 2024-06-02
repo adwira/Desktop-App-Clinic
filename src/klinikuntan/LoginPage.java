@@ -128,7 +128,7 @@ public class LoginPage extends javax.swing.JFrame {
         String pw = kolomPw.getText();
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
             String sql = "select * from karyawan where id_karyawan = ? AND password = ?";
             PreparedStatement pst = conn.prepareStatement(sql);
 
