@@ -2582,19 +2582,23 @@ public class Admin extends javax.swing.JFrame {
     private void buttonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateActionPerformed
         // TODO add your handling code here:
         try {
-            //Class.forName("com.mysql.cj.jdbc.Driver");
+            String namaDokter = upNamaDokter.getText();
+            String bagianDokter = upKdBagianDokter.getText();
+            String tglDokter = upTglDokter.getText();
+            String genderDokter = String.valueOf(upGenderDokter.getSelectedItem());
+            String alamatDokter = upAlamatDokter.getText();
+            String hpDokter = uphpDokter.getText();
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
             String sql = "UPDATE dokter SET id_karyawan = ?, kd_bagian = ?, nama = ?, jenis_kelamin = ?, alamat = ?, tgl_lahir = ?, no_hp = ? where no_str = ?;";
             PreparedStatement pst = conn.prepareStatement(sql);
 
-            pst.setString(1, upStr.getText());
-            pst.setString(2, upKdBagianDokter.getText());
-            pst.setString(3, upNamaDokter.getText());
-            pst.setString(4, upGenderDokter.getSelectedItem().toString());
-            pst.setString(5, upAlamatDokter.getText());
-            pst.setString(6, upTglDokter.getText());
-            pst.setString(7, uphpDokter.getText());
-            pst.setString(8, upStr.getText());
+            pst.setString(1, namaDokter == null ? null : namaDokter);
+            pst.setString(2, bagianDokter == null ? null : bagianDokter);
+            pst.setString(3, tglDokter == null ? null : tglDokter);
+            pst.setString(4, genderDokter == null ? null : genderDokter);
+            pst.setString(5, alamatDokter == null ? null : alamatDokter);
+            pst.setString(6, hpDokter == null ? null : hpDokter);
+            pst.setString(7, upStr.getText());
             pst.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Data berhasil diperbarui");
@@ -2970,14 +2974,18 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
-
-            String sql = "UPDATE pasien SET nama_pasien = ?, usia = ?, jenis_kelamin = ?, alamat = ?, no_hp = ? WHERE nik = ?";
+            String namaPasien = upNamaPasien.getText();
+            String usiaPasien = upUsiaPasien.getText();
+            String genderPasien = String.valueOf(upGenderPasien.getSelectedItem());
+            String alamatPasien = upAlamatPasien.getText();
+            String hpPasien = uphpPasien.getText();
+            String sql = "UPDATE pasien SET nama_pasien = IFNULL(?, nama_pasien), usia = IFNULL(?, usia), jenis_kelamin = IFNULL (?, jenis_kelamin), alamat = IFNULL(?, alamat), no_hp = IFNULL(?,no_hp) WHERE nik = ?";
             PreparedStatement pst = conn.prepareStatement(sql);
-            pst.setString(1, upNamaPasien.getText());
-            pst.setString(2, upUsiaPasien.getText());
-            pst.setString(3, upGenderPasien.getSelectedItem().toString());
-            pst.setString(4, upAlamatPasien.getText());
-            pst.setString(5, uphpPasien.getText());
+            pst.setString(1, namaPasien == null ? null : namaPasien);
+            pst.setString(2, usiaPasien == null ? null : usiaPasien);
+            pst.setString(3, genderPasien == null ? null : genderPasien);
+            pst.setString(4, alamatPasien == null ? null : alamatPasien);
+            pst.setString(5, hpPasien == null ? null : hpPasien);
             pst.setString(6, upNik.getText());
 
             int rowsAffected = pst.executeUpdate();
@@ -3082,18 +3090,18 @@ public class Admin extends javax.swing.JFrame {
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
-            String sql = "UPDATE karyawan SET kd_bagian = ?, kd_shift = ?, nama = ?, jenis_kelamin = ?, alamat = ?, tgl_lahir = ?, no_hp = ?, jabatan = ?, password = ? where id_karyawan = ?;";
+            String sql = "UPDATE karyawan SET kd_bagian = IFNULL(?, kd_bagian), kd_shift = IFNULL(?, kd_shift), nama = IFNULL(?, nama), jenis_kelamin = IFNULL(?, jenis_kelamin), alamat = IFNULL(?, alamat), tgl_lahir = IFNULL(?, tgl_lahir), no_hp = IFNULL(?, no_hp), jabatan = IFNULL(?, jabatan), password = IFNULL(?, password) where id_karyawan = ?;";
             PreparedStatement pst = conn.prepareStatement(sql);
 
-            pst.setString(1, upKdBagianKaryawan.getText());
-            pst.setString(2, upKdShiftKaryawan.getText());
-            pst.setString(3, upNamaKaryawan.getText());
-            pst.setString(4, upGenderKaryawan.getSelectedItem().toString());
-            pst.setString(5, upAlamatKaryawan.getText());
-            pst.setString(6, upTglKaryawan.getText());
-            pst.setString(7, uphpKaryawan.getText());
-            pst.setString(8, upJabatan.getText());
-            pst.setString(9, upPassword.getText());
+            pst.setString(1, upKdBagianKaryawan.getText() == null ? null : upKdBagianKaryawan.getText());
+            pst.setString(2, upKdShiftKaryawan.getText() == null ? null : upKdShiftKaryawan.getText());
+            pst.setString(3, upNamaKaryawan.getText() == null ? null : upNamaKaryawan.getText());
+            pst.setString(4, upGenderKaryawan.getSelectedItem().toString() == null ? null : upGenderKaryawan.getSelectedItem().toString());
+            pst.setString(5, upAlamatKaryawan.getText() == null ? null : upAlamatKaryawan.getText());
+            pst.setString(6, upTglKaryawan.getText() == null ? null : upTglKaryawan.getText());
+            pst.setString(7, uphpKaryawan.getText() == null ? null : uphpKaryawan.getText());
+            pst.setString(8, upJabatan.getText() == null ? null : upJabatan.getText());
+            pst.setString(9, upPassword.getText() == null ? null : upPassword.getText());
             pst.setString(10, upIdKaryawan.getText());
             pst.executeUpdate();
 
@@ -3189,8 +3197,7 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
-
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
             String sql = "INSERT INTO pemeriksaan(nik, kd_bagian, id_karyawan, diagnosa, keluhan, tgl_periksa) VALUES(?, ?, ?, ?,?,curdate());";
             PreparedStatement pst = conn.prepareStatement(sql);
 
@@ -3214,13 +3221,14 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
             String kd_periksa = textPerbaruiKodePemeriksaan.getText();
             String nik = textNIKPasienPemeriksaan1.getText();
             String kodeBagian = textKodeBagianPemeriksaan1.getText(); // Assuming this is the value for kd_bagian
             String idKaryawan = textIDKaryawanPemeriksaan1.getText(); // Assuming this is the value for id_karyawan
             String diagnosa = textDiagnosaPemeriksaan1.getText(); // Assuming this is the value for Diagnosa
             String keluhan = textKeluhanPemeriksaan1.getText();
+
             String sql = "UPDATE pemeriksaan SET "
                     + "kd_bagian = IFNULL(?, kd_bagian), "
                     + // Use IFNULL to set NULL if value is null
@@ -3252,7 +3260,7 @@ public class Admin extends javax.swing.JFrame {
     private void buttonCariPemeriksaanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCariPemeriksaanActionPerformed
         // TODO add your handling code here:
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
             DefaultTableModel model = new DefaultTableModel();
 //            String query = "select * from pemeriksaan where kd_periksa  like %?% or nik like %?% or id_karyawan like %?%";
 
@@ -3318,7 +3326,7 @@ public class Admin extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
 //            String find = textHapusPemeriksaan.getText();
             String sql = "delete from pemeriksaan where kd_periksa = ?";
             PreparedStatement pst = conn.prepareStatement(sql);
@@ -3398,30 +3406,27 @@ public class Admin extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonTambahObatActionPerformed
 
     private void buttonUpdateObatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateObatActionPerformed
-        // TODO add your handling code here:
-        try {
+       try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Ferdian123");
             String sql = "UPDATE obat SET nama_obat = ?, stok = ?, harga_obat = ? where kd_obat = ?;";
             PreparedStatement pst = conn.prepareStatement(sql);
 
-            pst.setString(1, namaObat.getText());
-            pst.setInt(2, Integer.parseInt(stokObat.getText()));
-            pst.setBigDecimal(3, new BigDecimal(hargaObat.getText()));
-            pst.setString(4, kdObat.getText());
+            pst.setString(1, kdObat.getText());
+            pst.setString(2, namaObat.getText());
+            pst.setInt(3, Integer.parseInt(stokObat.getText()));
+            pst.setBigDecimal(4, new BigDecimal(hargaObat.getText())); // Menggunakan setBigDecimal untuk harga yang bertipe DECIMAL
 
             pst.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Data berhasil diperbarui");
+            JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
             conn.close();
 
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Terjadi Kegagalan: " + e.getMessage());
             e.printStackTrace(); // Untuk mencetak detail stack trace ke konsol
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Stok harus berupa angka dan harga harus berupa nilai desimal yang valid.");
-            e.printStackTrace(); // Untuk mencetak detail stack trace ke konsol
         }
+        
     }//GEN-LAST:event_buttonUpdateObatActionPerformed
 
     private void buttonTambahShiftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTambahShiftActionPerformed
@@ -3501,7 +3506,7 @@ public class Admin extends javax.swing.JFrame {
             textTotalPembayaran.setText("Rp. " + totPem);
             String insert = "insert into pembayaran values(?, ?, " + totPem + ", ?)";
             PreparedStatement ins = conn.prepareStatement(insert);
-            
+
             ins.setString(1, textKodeResep.getText());
             ins.setString(2, textKodePembayaran.getText());
             ins.setString(3, comboBoxMetodePembayaran.getSelectedItem().toString());
