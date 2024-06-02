@@ -1745,32 +1745,32 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="LabelNoHPKaryawan1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textNoHPKaryawan1" pref="303" max="32767" attributes="0"/>
+                                  <Component id="uphpKaryawan" pref="303" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelTglLahirKaryawan1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textTanggalLahirKaryawan1" max="32767" attributes="0"/>
+                                  <Component id="upTglKaryawan" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelAlamatKaryawan1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textAlamatKaryawan1" max="32767" attributes="0"/>
+                                  <Component id="upAlamatKaryawan" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelKodeShiftKaryawan1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textKdShift1" max="32767" attributes="0"/>
+                                  <Component id="upKdShiftKaryawan" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelKodeBagianKaryawan1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textKdBagianKaryawan1" max="32767" attributes="0"/>
+                                  <Component id="upKdBagianKaryawan" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="labelIdKaryawan1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="textIdKaryawan1" max="32767" attributes="0"/>
+                                  <Component id="upIdKaryawan" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -1780,21 +1780,21 @@
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="comboBoxJenisKelaminKaryawan1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="upGenderKaryawan" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <Component id="textNamaKaryawan1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="upNamaKaryawan" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="LabelPasswordKaryawan" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="passwordKaryawan1" pref="303" max="32767" attributes="0"/>
+                                  <Component id="upPassword" pref="303" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="LabelJabatanKaryawan2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="jabatanKaryawan1" pref="303" max="32767" attributes="0"/>
+                                  <Component id="upJabatan" pref="303" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
@@ -1812,52 +1812,52 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelIdKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textIdKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upIdKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelKodeBagianKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textKdBagianKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upKdBagianKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelKodeShiftKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textKdShift1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upKdShiftKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelNamaKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textNamaKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upNamaKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelJenisKelaminKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="comboBoxJenisKelaminKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upGenderKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelAlamatKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textAlamatKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upAlamatKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="labelTglLahirKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textTanggalLahirKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upTglKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="LabelNoHPKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="textNoHPKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="uphpKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="LabelJabatanKaryawan2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jabatanKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upJabatan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="LabelPasswordKaryawan" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="passwordKaryawan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="upPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="37" max="32767" attributes="0"/>
                           <Component id="buttonTambahKaryawan1" min="-2" max="-2" attributes="0"/>
@@ -1875,21 +1875,21 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textKdBagianKaryawan1">
+                <Component class="javax.swing.JTextField" name="upKdBagianKaryawan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textIdKaryawan1">
+                <Component class="javax.swing.JTextField" name="upIdKaryawan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textAlamatKaryawan1">
+                <Component class="javax.swing.JTextField" name="upAlamatKaryawan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
@@ -1928,7 +1928,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="comboBoxJenisKelaminKaryawan1">
+                <Component class="javax.swing.JComboBox" name="upGenderKaryawan">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="2">
@@ -1941,31 +1941,31 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textKdShift1">
+                <Component class="javax.swing.JTextField" name="upKdShiftKaryawan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNoHPKaryawan1">
+                <Component class="javax.swing.JTextField" name="uphpKaryawan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textNoHPKaryawan1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="uphpKaryawanActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textTanggalLahirKaryawan1">
+                <Component class="javax.swing.JTextField" name="upTglKaryawan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="textNamaKaryawan1">
+                <Component class="javax.swing.JTextField" name="upNamaKaryawan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
@@ -2012,14 +2012,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jabatanKaryawan1">
+                <Component class="javax.swing.JTextField" name="upJabatan">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jabatanKaryawan1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="upJabatanActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="LabelPasswordKaryawan">
@@ -2030,14 +2030,14 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="passwordKaryawan1">
+                <Component class="javax.swing.JTextField" name="upPassword">
                   <Properties>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[300, 25]"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordKaryawan1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="upPasswordActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -3877,6 +3877,9 @@
                       <Dimension value="[90, 25]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTambahShift1ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="labelWaktuTambah3">
                   <Properties>
