@@ -2003,7 +2003,7 @@ public class Admin extends javax.swing.JFrame {
             }
         });
 
-        labelDelete2.setText("Kode Obat");
+        labelDelete2.setText("Kode Shift");
         labelDelete2.setPreferredSize(new java.awt.Dimension(37, 25));
 
         javax.swing.GroupLayout panelHapusShiftLayout = new javax.swing.GroupLayout(panelHapusShift);
@@ -2528,12 +2528,12 @@ public class Admin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 576, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(adminTabbedPane, javax.swing.GroupLayout.DEFAULT_SIZE, 791, Short.MAX_VALUE)
+                .addComponent(adminTabbedPane)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -2596,7 +2596,8 @@ public class Admin extends javax.swing.JFrame {
             String alamatDokter = upAlamatDokter.getText();
             String hpDokter = uphpDokter.getText();
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
-            String sql = "UPDATE dokter SET id_karyawan = ?, kd_bagian = ?, nama = ?, jenis_kelamin = ?, alamat = ?, tgl_lahir = ?, no_hp = ? where no_str = ?;";
+            String sql = "UPDATE dokter SET id_karyawan = ifnull(?,id_karyawan),"
+                    + " nama = ifnull(?,nama), kd_bagian = ifnull(?,kd_bagian),tgl_lahir = ifnull(?,tgl_lahir)  ,jenis_kelamin = ifnull(?,jenis_kelamin), alamat = ifnull(?,alamat), no_hp = ifnull(?,no_hp) where no_str = ?;";
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1, idKaryawan.length() == 0 ? null : idKaryawan);
             pst.setString(2, namaDokter.length() == 0 ? null : namaDokter);
@@ -2632,7 +2633,7 @@ public class Admin extends javax.swing.JFrame {
             stmt.setString(2, "%" + userInput + "%");
             stmt.setString(3, "%" + userInput + "%");
 
-            Object[] header = {"Nomor STR", "ID Karyawan", "Kode Bagian", "Nama Dokter", "Jenis Kelamin", "Alamat", "Tanggal Lahir", "Nomor HP"};
+            Object[] header = {"Nomor STR", "Kode Bagian", "ID Karyawan", "Nama Dokter", "Jenis Kelamin", "Alamat", "Tanggal Lahir", "Nomor HP"};
             Object[][] matchedData = null;
             List<Object[]> rows = new ArrayList<>();
             int rowCount = 0;
@@ -2685,7 +2686,7 @@ public class Admin extends javax.swing.JFrame {
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
-            String sql = "DELETE FROM dokter where no_str = ?);";
+            String sql = "DELETE FROM dokter where no_str = ?;";
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1, deleteDokter.getText());
             pst.execute();
@@ -3201,7 +3202,7 @@ public class Admin extends javax.swing.JFrame {
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
-            String sql = "DELETE FROM karyawan where id_karyawan = ?);";
+            String sql = "DELETE FROM karyawan where id_karyawan = ?;";
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1, deleteKaryawan.getText());
             pst.execute();
@@ -3219,7 +3220,7 @@ public class Admin extends javax.swing.JFrame {
         try {
             //Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
-            String sql = "INSERT INTO pemeriksaan(nik, kd_bagian, id_karyawan, diagnosa, keluhan, tgl_periksa) VALUES(?, ?, ?, ?,?,curdate());";
+            String sql = "INSERT INTO pemeriksaan(nik, kd_bagian, id_karyawan, diagnosa, keluhan, tgl_periksa) VALUES(?, ?, ?, ?,?,current_time());";
             PreparedStatement pst = conn.prepareStatement(sql);
 
             pst.setString(1, textNIKPasienPemeriksaan.getText());
@@ -3233,8 +3234,8 @@ public class Admin extends javax.swing.JFrame {
 
             conn.close();
 
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan");
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Terjadi Kegagalan :" +e.getMessage() );
         }
     }//GEN-LAST:event_buttonTambahPemeriksaanActionPerformed
 
@@ -3292,7 +3293,7 @@ public class Admin extends javax.swing.JFrame {
             stmt.setString(2, "%" + userInput + "%");
             stmt.setString(3, "%" + userInput + "%");
 
-            Object[] header = {"Kode Periksa", "NIK", "Kode Bagian", "ID Karyawan", "Keluhan", "Diagnosa", "Tanggal Periksa"};
+            Object[] header = {"Kode Periksa", "NIK", "Kode Bagian", "ID Karyawan", "Keluhan", "Diagnosa", "Tanggal Periksa","Biaya"};
             Object[][] matchedData = null;
             List<Object[]> rows = new ArrayList<>();
 //             Object[] rowData;// Assuming 10 rows and 3 columns (adjust as needed)
@@ -3310,13 +3311,14 @@ public class Admin extends javax.swing.JFrame {
                     String keluhan = rs.getString("Keluhan");
                     String diagnosa = rs.getString("diagnosa");
                     String tgl_periksa = rs.getString("tgl_periksa");
+                    String harga = rs.getString("harga");
 
                     // Compare data to user input
                     if (String.valueOf(kd_periksa).contains(userInput) || nik.contains(userInput)
                             || kd_bagian.contains(userInput) || id_karyawan.contains(userInput)) {
 
                         System.out.println(nik);
-                        String[] rowData = {kd_periksa, nik, kd_bagian, id_karyawan, keluhan, diagnosa, tgl_periksa};
+                        String[] rowData = {kd_periksa, nik, kd_bagian, id_karyawan, keluhan, diagnosa, tgl_periksa,harga};
 
                         // Add the row data to the table model
 //                        model.addRow(rowData);
@@ -3464,7 +3466,7 @@ public class Admin extends javax.swing.JFrame {
             pst.setString(4, kodeObat);
             pst.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
+            JOptionPane.showMessageDialog(null, "Data berhasil diperbarui");
             conn.close();
 
         } catch (Exception e) {
@@ -3503,7 +3505,7 @@ public class Admin extends javax.swing.JFrame {
             String hari = upHari.getText();
             String waktu = upWaktu.getText();
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/klinik_pratama_untan", "root", "Adwira121804");
-            String sql = "UPDATE shift SET hari = ?, waktu = ? where kd_shift = ?;";
+            String sql = "UPDATE shift SET hari = ifnull(?,hari), waktu = ifnull(?,waktu) where kd_shift = ?;";
             PreparedStatement pst = conn.prepareStatement(sql);
 
             pst.setString(1, hari.length() == 0 ? null : hari);
