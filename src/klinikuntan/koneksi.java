@@ -19,7 +19,7 @@ public class koneksi {
         try {
             String url ="jdbc:mysql://localhost/klinik_pratama_untan";
             String user="root";
-            String pass="Ferdian123";
+            String pass="Adwira121804";
             Class.forName("com.mysql.cj.jdbc.Driver");
             con =DriverManager.getConnection(url,user,pass);
             stm = con.createStatement();
