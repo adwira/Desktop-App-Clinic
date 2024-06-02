@@ -26,7 +26,7 @@ public class Doctor extends javax.swing.JFrame {
         initComponents();
     }
     
-    int curkd_resep = 3;
+    int curkd_resep = 4;
     List<Object[]> rows = new ArrayList<>();
 
     /**
@@ -384,19 +384,23 @@ public class Doctor extends javax.swing.JFrame {
             String kd_resep = String.format("%08d", curkd_resep);
             String kd_obat = "";
             int stok = 0;
+            
             String nama = textNamaObatResep.getText();
             String stringJumlah = textJumlahObatResep.getText();
             Integer jumlah = Integer.parseInt(stringJumlah);
+//            Integer hargaObat = Integer.parseInt();
+            int hrg = 0;
             String dosis = textDosisObat.getText();
             String deskripsi = textAreaDeskripsi.getText();
 
             // Check for existing obat and stock
-            try (PreparedStatement pst1 = conn.prepareStatement("SELECT kd_obat, stok FROM obat WHERE nama_obat = ?")) {
+            try (PreparedStatement pst1 = conn.prepareStatement("SELECT kd_obat, stok, harga_obat FROM obat WHERE nama_obat = ?")) {
                 pst1.setString(1, nama);
                 ResultSet rs = pst1.executeQuery();
                 if (rs.next()) {
                     kd_obat = rs.getString("kd_obat");
                     stok = rs.getInt("stok");
+                    hrg = rs.getInt("harga_obat");
                 } else {
                     JOptionPane.showMessageDialog(null, "Obat tidak ditemukan");
                     return; // Exit if obat not found
@@ -407,7 +411,8 @@ public class Doctor extends javax.swing.JFrame {
                 }
 
                 // Insert into resep table if obat is found and has stock
-                PreparedStatement pst = conn.prepareStatement("INSERT INTO resep(kd_resep, nama_obat, jumlah, dosis, deskripsi, kd_periksa, kd_obat) VALUES (?, ?, ?, ?, ?, ?, ?)");
+                hrg *= jumlah;
+                PreparedStatement pst = conn.prepareStatement("INSERT INTO resep(kd_resep, nama_obat, jumlah, dosis, deskripsi, kd_periksa, kd_obat, harga) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
                 pst.setString(1, kd_resep);
                 pst.setString(2, nama);
                 pst.setInt(3, jumlah);
@@ -415,6 +420,7 @@ public class Doctor extends javax.swing.JFrame {
                 pst.setString(5, deskripsi);
                 pst.setString(6, kd_periksa);
                 pst.setString(7, kd_obat);
+                pst.setInt(8, hrg);
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Berhasil Ditambahkan Ke Resep");
                 String srowCount = String.valueOf(rowCount);
